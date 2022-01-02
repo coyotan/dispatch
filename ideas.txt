@@ -1,6 +1,11 @@
 Design to be used with Traefik; that way Traefik can automatically Reverse-proxy if multiple Transmission boxes are running while providing each user their expected privacy.
 Using Docker's default random names, this should make it pretty easy to have uniqnue URIs for each Transmission box.
 
+Establish a connection with remote docker instance; this should probably be done using SSH if that's possible, since we'll be running this software on a different machine. 
+  Possibly a docker container?
+    If so, add support for detecting if the DockerSock is passed through?
+  Design to use SSH anyways... just in case.
+
 Start by finding an easy way to spin up Transmission boxes by CLI; then write a docker-compose. We will use this docker-compose as the baseline to automate creation.
   Randomly generate username/password combination. These are one-time use, and will not be linked to the user's Nextcloud SSO account.
 
