@@ -1,0 +1,15 @@
+Design to be used with Traefik; that way Traefik can automatically Reverse-proxy if multiple Transmission boxes are running while providing each user their expected privacy.
+Using Docker's default random names, this should make it pretty easy to have uniqnue URIs for each Transmission box.
+
+Start by finding an easy way to spin up Transmission boxes by CLI; then write a docker-compose. We will use this docker-compose as the baseline to automate creation.
+  Randomly generate username/password combination. These are one-time use, and will not be linked to the user's Nextcloud SSO account.
+
+Setup temporary catchall storage volume (TransmissionData)
+
+Figure out how to tell the Transmission container to start torrenting automatically. Keep the container running for as long as the torrent is being downloaded; but when all torrents are done the transmission box should shut down.
+  This may be one of the more difficult parts... hopefully it doesn't require software to run within the container. 
+  We might be able to watch this from the outside, given we will have the transmission box's password.
+  
+After creation is automated and downloading has been sorted out, add "userspace" concept; where people may have their own storage volumes for the stored data.
+  This will probably require the creation of a USER variable; which will need to be introduced into the docker-compose file.
+  Explore somehow syncing this data with Nextcloud?
