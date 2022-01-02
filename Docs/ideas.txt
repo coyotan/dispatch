@@ -22,3 +22,5 @@ After creation is automated and downloading has been sorted out, add "userspace"
 Consider adding support for a seed container; something that will never expire and can be used to share data with other members of the network for a longer perioud of time than the duration that it takes to download the data.
 
 Add an option for "pay it back"; upload an equal amount of data to that which was downloaded before destroying the container.
+
+One day, add support for TLS instead of SSH. Both are useful; but one can be reverse-proxied and the other cannot...

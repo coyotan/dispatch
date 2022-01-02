@@ -13,9 +13,6 @@ Transmission Control runs separate from the server(s) it deploys torrent contain
 In order to deploy containers on a remote docker instace we must establish a secure channel of communications. For this we can use either TLS or SSH. We've elected to use the SSH approach, as the TLS method introduced some complexities into the configuration process which may make Transmission Control less user-friendly during the configuration process.
 
 ## How do I configure SSH for Transmission Control?
-
-This varies depending on which Operating System you're deploying Transmission Control on, and may vary depending on your network environment.
-
 Before moving to the SSH configurations, make sure that the server you intend to deploy Transmission Control is able to connect to the target Docker server via SSH normally. If it is not able to connect to the server under normal conditions, you will need to troubleshoot these connection issues before continuing.
 
 ### All Operating Systems
@@ -69,7 +66,11 @@ docker context use transmission-control
 # Test the new docker context by getting information from the Docker server.
 docker info
 
-# If you were prompted for a password, you will need to troubleshoot your ssh agent. If the issue persists, using SSH Host Configs is also supported by docker, you will need to change the host=ssh://username@remote_host to the name of the host config in your .ssh/config file. if you take this approach.
+# If you were prompted for a password, you will need to troubleshoot your ssh agent. If the issue persists, using SSH Host Configs is also supported by docker. You will need to change the host=ssh://username@remote_host to the name of the host config in your .ssh/config file. if you take this approach.
 
 # If you were not promtped for a password, congratulations! You have configured Docker and SSH for Transmission Control.
 ```
+
+## Additional Troubleshooting
+
+Some information about SSH Configurations can be found here: [DigitalOcean SSH Guidance](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server)
