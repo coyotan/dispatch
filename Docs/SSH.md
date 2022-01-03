@@ -15,7 +15,7 @@ In order to deploy containers on a remote docker instace we must establish a sec
 ## How do I configure SSH for Transmission Control?
 Before moving to the SSH configurations, make sure that the server you intend to deploy Transmission Control is able to connect to the target Docker server via SSH normally. If it is not able to connect to the server under normal conditions, you will need to troubleshoot these connection issues before continuing.
 
-### All Operating Systems
+## All Operating Systems
 
 The Windows, Linux, and macOS configurations vary only slightly from each other. Please carefully read the instructions below to configure SSH for Transmission Control on your OS.
 <br><br>
