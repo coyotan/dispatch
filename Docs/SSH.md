@@ -22,13 +22,18 @@ The Windows, Linux, and macOS configurations vary only slightly from each other.
 Just a reminder to carefully and completely read the instructions before pressing enter.<br>
 ["The warnings come after the spells"](https://youtu.be/S8r8RAkLuz0?t=225)
 <br><br>
-Some versions of Windows support an optional feature that provides OpenSSH. This can be enabled by going into Windows Settings, Apps & Features, Optional Features, and enabling the OpenSSH feature if it is not already enabled. This must done as Docker relies on this service to connect to the remote server.
+Some versions of Windows support an optional feature that provides OpenSSH. This can be enabled enabling it in Windows Settings;
+    
+- Find the Apps & Features tab in the Windows Settings;
+- Select "Optional Features"
+- Find and install OpenSSH.
+
 
 After completing the above step, install Docker.
 <br><br>
 <b>Note</b>: You do not need to install the WSL2 package for Docker for Windows. We will use Docker Context to connect to a remote docker server. Transmission Control does not currently support deploying docker containers on the same server it is deployed on.
 <br><br>
-Run the following commands in an Administrator instance of PowerShell.
+Run the following commands in an Administrator terminal:
 ```bash
 # Generate a new SSH key, also known as an Identity.
 ssh-keygen
